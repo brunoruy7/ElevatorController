@@ -60,10 +60,11 @@ public class Elevator implements Runnable {
     }
     
     public void handleArraval(){
+        int doorsOpen = 1500;
         System.out.println("Open "+this.threadName+" doors.");
         if ( !this.emergency){
             try{
-                Thread.sleep(1500);
+                Thread.sleep(doorsOpen);
                 System.out.println("Close " + this.threadName + " doors.");
             } catch(InterruptedException ex){}
         }
